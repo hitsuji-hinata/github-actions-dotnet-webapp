@@ -1,0 +1,22 @@
+name: dotnet-push workflow
+
+on:
+  push:
+
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  lint:
+    name: executa_push
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - run: echo "Iniciando YAML WORKFLOW"
+      
+      - uses: actions/checkout@v2
+      
+      - uses: actions/starter-workflows
+
